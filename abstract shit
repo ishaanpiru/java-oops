@@ -1,0 +1,27 @@
+abstract class A {
+	abstract void callme();
+	static void callmedaddy(){
+		System.out.println("ishaan v chutiya hai");
+	}
+	// concrete methods are still allowed in abstract classes
+	void callmetoo() {
+		System.out.println("This is a concrete method.");
+	}
+}
+class B extends A {
+	void callme() {
+		System.out.println("B's implementation of callme.");
+	}
+}
+class AbstractDemo {
+	public static void main(String args[]) {
+//		A a = new A(); Can't instantiate
+		B b = new B();
+		b.callme();
+		b.callmetoo();
+		A.callmedaddy();
+        A ref;
+    
+        ref.callmetoo();
+	}
+}

@@ -1,0 +1,21 @@
+class box{
+    int length;
+    int width;
+    int height;
+    box(int a , int b , int c){
+        this.length=a;
+        this.width=b;
+        this.height=c;}
+    public String toString(){
+        return("length= " + length + ", width= " + width + ", height= "+ height);
+
+    
+    }
+}
+public class Program
+{
+    public static void main(String[] args) {
+		box b = new box(2,3,4);
+        System.out.println(b);
+	}
+}

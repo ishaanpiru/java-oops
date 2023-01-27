@@ -1,0 +1,46 @@
+abstract class A{
+    int i;
+	
+	abstract void callme();
+}
+
+ class B extends A{
+     int i;
+     B(int a , int b){
+        i=a;
+        super.i=b;
+    }
+   void callme(){
+		System.out.println(i + super.i
+        );
+   
+	} 
+	
+	
+}
+
+class C extends A{
+	
+	 void callme(){
+		System.out.println("Class C's Callme");
+	}
+}
+
+class AbstractDerived{	
+	public static void main(String args[]) {
+		C cObj = new C();
+		cObj.callme();
+		
+		A aObj = new C();
+		aObj.callme();
+    
+    output;
+    Class C's Callme
+Class C's Callme
+3
+        A bObj = new B(1,2);
+		bObj.callme();
+A abj;
+		
+	}
+}

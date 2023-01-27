@@ -1,0 +1,28 @@
+// Dynamic Method Dispatch
+class A {
+	A(){
+        System.out.println("A");
+    }
+	}
+
+class B extends A {
+	// override callme()
+	B(){
+System.out.println("B");
+    }
+	}
+    
+
+
+class Dispatch {
+	public static void main(String args[]) {
+		 // object of type A
+		B b = new B(); // object of type B
+		
+				
+	}
+}
+
+outpit;
+A 
+B

@@ -1,0 +1,88 @@
+class Box {
+	public double width;
+	public double height;
+	public double depth;
+
+	// constructor used when all dimensions specified
+	Box(double w, double h, double d) {
+		width = w;
+		height = h;
+		depth = d;
+		System.out.println("Box constructor");
+	}
+	// constructor used when no dimensions specified
+	Box() {
+		width = -1; // use -1 to indicate
+		height = -1; // an uninitialized
+		depth = -1; // box
+	}
+
+	// compute and return volume
+	double volume() {
+        System.out.println("a ka vol");
+		return width * height * depth;
+
+	}
+        public  void printl(){
+        System.out.println("chalaA");
+    }
+}
+// Add weight.
+class BoxWeight extends Box {
+    private  void print(){
+        System.out.println("chala");
+    }
+	double weight; // weight of box
+  
+  
+
+	// constructor when all parameters are specified
+	BoxWeight(double w, double h, double d, double m) {
+		super(w, h, d); // call superclass constructor
+		weight = m;
+		System.out.println("BoxWeight constructor");
+	}
+	// default constructor
+	BoxWeight() {
+		super();
+		weight = -1;
+
+	}
+    	double volume() {                System.out.println("b ka vol");
+		return width * height * depth;
+                
+	}
+double volume1() {
+		return super.volume();
+	}
+}
+// Add shipping costs.
+class Shipment extends BoxWeight {
+	double cost;
+	
+	// constructor when all parameters are specified
+	Shipment(double w, double h, double d,	double m, double c) {
+		super(w, h, d, m); // call superclass constructor
+		cost = c;
+		System.out.println("Shipment constructor");
+	}
+	// default constructor
+	Shipment() {
+		super();
+		cost = -1;
+	}
+}
+class DemoShipment {
+	public static void main(String args[]) {
+		Shipment shipment1 = new Shipment(10, 20, 15, 10, 3.41);
+		double vol;
+		vol = shipment1.volume();
+        double vol1 = shipment1.volume1();
+		System.out.println("Volume of shipment1 is " + vol);
+		System.out.println("Weight of shipment1 is " + shipment1.weight);
+		System.out.println("Shipping cost: $" + shipment1.cost);
+ 		System.out.println("Volume of shipment1 is " + vol1);  
+        Box w=new BoxWeight();
+        w.printl();    
+	}
+}

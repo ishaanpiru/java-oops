@@ -1,0 +1,21 @@
+interface Employee {
+default void display() {
+System.out.println("Executing display in Employee ");}}
+
+interface Customer {
+default void display(){
+System.out.println("Executing display in Customer");}}
+
+public class Bank  implements Employee,Customer
+{
+   public void display(){}
+    public void discust()
+    {
+        Customer.super.display();
+    }
+    public static void main(String[] args) {
+        Bank n= new Bank();
+        n.discust();
+		
+	}
+}

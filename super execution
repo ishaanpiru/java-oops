@@ -1,0 +1,29 @@
+class A{
+    int a,b;
+
+    A(int x,int y){
+        this.a=x;
+        this.b=y;
+        System.out.println("first");
+    }
+    }
+
+ class B extends A{   
+    int c,d;
+    B(int x , int y){
+        super(x,y);
+        /*this.a=y;
+        this.b=x;*/
+   System.out.println("second");
+    }
+}
+class main{
+    public static void main(String args[]){
+        B o=new B(2,5);
+    }
+}
+
+
+SUPER FIRST ALWAYS
+output;
+first second

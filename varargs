@@ -1,0 +1,16 @@
+class varargs{
+    static void vararg(int ... a){
+        for(int i=0 ; i < a.length ;i++){
+        System.out.println(i);
+        int o=a[i];
+                        System.out.println(o);}
+
+    }
+}
+public class Program
+{
+    public static void main(String[] args) {
+
+		varargs.vararg(2,3,4,5,6);
+	}
+}
